@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\
+H:\worktool\wpf\sample\NavigationDrawer\NavigationDrawerPopUpMenu2\obj\Debug\
 NavigationDrawerPopUpMenu2
 none
 false
 DEBUG;TRACE
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\App.xaml
-3763843133
+H:\worktool\wpf\sample\NavigationDrawer\NavigationDrawerPopUpMenu2\App.xaml
+7-552503451
 
-7-2113534821
-151125528092
-MainWindow.xaml;UserControlCreate.xaml;UserControlHome.xaml;
+13679744358
+21-1344376269
+LoginWindow.xaml;MainWindow.xaml;UserControlChat.xaml;UserControlCreate.xaml;UserControlHome.xaml;UserControlLogin.xaml;UserControlMessage.xaml;
 
-False
+True
 

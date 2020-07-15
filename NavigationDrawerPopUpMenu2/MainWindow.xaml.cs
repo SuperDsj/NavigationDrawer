@@ -23,6 +23,12 @@ namespace NavigationDrawerPopUpMenu2
         public MainWindow()
         {
             InitializeComponent();
+            LoginWindow loginwindow = new LoginWindow();
+            loginwindow.ShowDialog();
+            if(loginwindow.DialogResult!=Convert.ToBoolean(1))
+            {
+                this.Close();
+            }
         }
         
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
@@ -52,8 +58,44 @@ namespace NavigationDrawerPopUpMenu2
                     usc = new UserControlCreate();
                     GridMain.Children.Add(usc);
                     break;
+                case "ItemweChat":
+                    usc = new UserControlChat();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "ItemMessage":
+                    usc = new UserControlMessage();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
                     break;
+            }
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Settings_Click");
+        }
+
+        private void Account_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Account_Click");
+        }
+
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Help_Click");
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("您真的要退出吗？", "提示", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }

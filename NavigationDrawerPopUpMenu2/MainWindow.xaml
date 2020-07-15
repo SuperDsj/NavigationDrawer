@@ -35,25 +35,25 @@
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
             </Grid.Effect>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock Text="Abel Dutra" VerticalAlignment="Center" FontSize="16"/>
+                <TextBlock Text="设置" VerticalAlignment="Center" FontSize="16"/>
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
                     <StackPanel Width="150">
-                        <Button Content="Settings"/>
-                        <Button Content="Account"/>
-                        <Button Content="Help"/>
+                        <Button x:Name="Settings" Content="Settings" Click="Settings_Click"/>
+                        <Button x:Name="Account" Content="Account" Click="Account_Click"/>
+                        <Button x:Name="Help" Content="Help" Click="Help_Click"/>
                         <Separator/>
-                        <Button Content="Logout"/>
+                        <Button x:Name="Logout" Content="Logout" Click="Logout_Click"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Design com WPF</TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="22">分机账号:1001     坐席姓名:董世军      坐席类型：电话、在线 </TextBlock>
         </Grid>
         <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
             </Grid.Effect>
             <StackPanel>
-                <Grid Height="150" Background="White" RenderTransformOrigin="0.5,0.5">
+                <Grid Height="70" Background="LightBlue" RenderTransformOrigin="0.5,0.5">
                     <Grid.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -69,31 +69,49 @@
                         <materialDesign:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
 
-                    <Image Height="80" VerticalAlignment="Bottom"/>
+                    <Image Visibility="Collapsed" Height="80" Source="/Image/system/small.ico"  VerticalAlignment="Bottom"/>
                 </Grid>
                 <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
-                    <ListViewItem x:Name="ItemHome" Height="60">
+                    <ListViewItem x:Name="ItemHome" Selector.IsSelected="True" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ViewDashboard" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="IM-Chat" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemCreate" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="电话" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
+                    <ListViewItem x:Name="ItemweChat" Height="60">
+                        <StackPanel Orientation="Horizontal" >
                             <materialDesign:PackIcon Kind="Ticket" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Tickets" VerticalAlignment="Center"  Margin="20 10"/>
+                            <TextBlock Text="发现" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
+                    <ListViewItem x:Name="ItemMessage" Height="60">
+                        <StackPanel Orientation="Horizontal" >
                             <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Messages" VerticalAlignment="Center"  Margin="20 10"/>
+                            <TextBlock Text="历史" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemWorkorder" Height="60">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="工单" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemProposal" Height="60">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="意见与反馈" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemSetting" Height="60">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="设置" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

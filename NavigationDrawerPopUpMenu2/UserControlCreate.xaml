@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
              mc:Ignorable="d" 
              >
-    <Grid Background="Red">
+    <Grid Background="LightSkyBlue">
             
     </Grid>
 </UserControl>

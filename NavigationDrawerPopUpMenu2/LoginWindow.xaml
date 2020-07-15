@@ -1,0 +1,52 @@
+﻿<Window x:Class="NavigationDrawerPopUpMenu2.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Login" Height="600" Width="350" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        FontFamily="Segoe UI Emoji">
+    <Grid>
+        <Rectangle Height="280" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF34268A" Offset="1"/>
+                    <GradientStop Color="#FF33288B" Offset="0.546"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="Login2Rectangle"  Fill="White" HorizontalAlignment="Left" Height="365" Margin="35,170,0,0" RadiusY="10" RadiusX="10" VerticalAlignment="Top" Width="280">
+        </Rectangle>
+        <Image x:Name="Login2Image"  Height="365" Width="280" />
+
+        <Rectangle x:Name="LoginRectangle"  Width="280" Height="350"  VerticalAlignment="Bottom" Margin="0,80" RadiusY="10" RadiusX="10" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Grid x:Name="LoginGrid"  VerticalAlignment="Bottom"   Margin="35,80" Height="320">
+            <Label x:Name="txtmessage" Content="坐席登陆"  HorizontalContentAlignment="Center"  Foreground="Blue" VerticalAlignment="Top" Margin="15,-17,15.4,0"  FontSize="18" Width="250"/>
+            <StackPanel VerticalAlignment="Center" Margin="15">
+                <TextBox x:Name="Agent_ext" Margin="0,10" materialDesign:HintAssist.Hint="坐席分机" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                <TextBox x:Name="Agent_account" Margin="0,10" materialDesign:HintAssist.Hint="坐席账号" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                <PasswordBox x:Name="Agent_pass" Margin="0,10" materialDesign:HintAssist.Hint="坐席密码" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                <CheckBox Content="电话"   FontFamily="Champagne &amp; Limousines" FontSize="12"/>
+                <CheckBox Content="微信"   FontFamily="Champagne &amp; Limousines" FontSize="12"/>
+                <CheckBox Content="WebChat"   FontFamily="Champagne &amp; Limousines" FontSize="12"/>
+                <CheckBox Margin="5" Content="{Binding CheckName}"></CheckBox>
+            </StackPanel>
+        </Grid>
+        <Button x:Name="BtnLogin" Click="BtnLogin_Click" Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,65" Content="登  陆"/>
+        <TextBlock x:Name="LoginRegister" Text="注册" MouseLeftButtonDown="LoginRegister_MouseLeftButtonDown"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" Foreground="Gray" Cursor="Hand"/>
+        <TextBlock x:Name="LoginOther" Text="更多登陆方式" MouseLeftButtonDown="LoginOther_MouseLeftButtonDown" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="30" Foreground="Gray" Cursor="Hand"/>
+        <TextBlock x:Name="LoginContactUs" Text="联系我们" MouseLeftButtonDown="LoginContactUs_MouseLeftButtonDown" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="30" Foreground="Gray" Cursor="Hand"/>
+        <Image Source="Image/system/home.png" Width="100" Height="100" VerticalAlignment="Top" Margin="30"/>
+       
+    </Grid>
+</Window>
